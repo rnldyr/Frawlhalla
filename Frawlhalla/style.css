@@ -1,0 +1,388 @@
+*{
+    margin: 0;
+}
+
+/* Hiding Scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+  
+.body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+/* Hiding Scrollbar */
+
+header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-header{
+    margin-left: 20px;
+}
+
+.right-header{
+    margin-right: 20px;
+}
+
+#hamburger-icon{
+    width: 50px;
+    height: 50px;
+}
+
+.dropdown-button{
+    background-color: inherit;
+    border-color: inherit;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+.dropdown-content a{
+    padding: 15px 20px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-content a:active,
+.dropdown-content a:hover{
+    background-color: yellow;
+}
+
+#logo{
+    width: 160px;
+    height: 45px;
+    padding: 2px 0;
+    margin-left: 10px;
+}
+
+#playnow-hl{
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    background-color: yellow;
+}
+
+#playnow-hl:hover{
+    color: yellow;
+    background-color: #2d3a67;
+}
+
+/* Slider CSS by Avei */
+*{
+    box-sizing: border-box;
+}
+.slide-1
+{
+    display : none;
+}
+
+.slideshow-container img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.slideshow-container {
+    padding-top: 20px;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+/* End */
+
+.information-section{
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+
+.register-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 135px;
+    margin-bottom: 135px;
+}
+
+.register-section form {
+    width: 400px;
+    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.register-section > form > input{
+    width: 100%;
+    border: none;
+    padding: 16px 20px;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+.register-section > form > select{
+    width: 100%;
+    border: none;
+    padding: 16px 20px;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+.btnSubmit{
+    width: 100%;
+    background-color: #2d3a67;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.register-section input, .register-section select{
+    margin-bottom: 20px;
+}
+
+#register-feedback {
+    display: none;
+}
+
+.screenshot-images, .character-info{
+    display: grid;
+    margin: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.screenshot-images img{
+    width: 100%;
+}
+
+.character-info div img{
+    width: 250px;
+    height: 300px;
+    border-style: solid;
+}
+
+.character-info div{
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.character-text{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.info{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.left-information, .right-information{
+    max-width: 40%;
+}
+
+footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-hl-container{
+    display: flex;
+}
+
+.margin-lr{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.unused-hl:hover{
+    color: yellow;
+}
+
+.text-decoration-none{
+    text-decoration: none;
+}
+
+.bg-blue{
+    background-color: #6ac0f3;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.font-helvetica{
+    font-family: Helvetica;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.text-blue{
+    color: #2d3a67;
+}
+
+.text-size-big{
+    font-size: 3em;
+}
+
+.text-size-small{
+    font-size: 1.5em;
+}
+
+.padding-tb{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+@media screen and (max-width:800px){
+    .info{
+        margin-left: 25px;
+        margin-right: 25px;
+        flex-direction: column;
+    }
+
+    .info-title{
+        font-size: 2em;
+    }
+
+    .left-information, .right-information{
+        max-width: 100%;
+    }
+
+    .right-information{
+        margin-top: 25px;
+    }
+
+    footer div, footer p{
+        font-size: 0.75em;
+    }
+
+    .screenshot-images, .character-info{
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .register-section form{
+        width: 300px;
+    }
+
+    #hamburger-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    #logo {
+        width: 120px;
+        height: 40px;
+        padding: 5px 0;
+    }
+
+    #playnow-hl {
+        padding: 5px 5px 5px 5px;
+    }
+
+    .text-size-small {
+        font-size: 1.1em;
+    }
+
+    .info-title {
+        font-size: 1.5em;
+    }
+}
+
+/* Event CSS */
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap ;
+    justify-content: center;
+    padding: 20px;
+}
+
+.event {
+    display : flex;
+    flex-direction: column;
+    width: 310px;
+    height: 410px;
+    padding : 15px;
+}
+
+.event-img {
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+
+.event-title {
+    padding-top : 5px; 
+    padding-bottom : 5px;
+    font-family: Helvetica, sans-serif;
+}
+
+.event-date-type{
+    padding-top: 10px;
+    padding-bottom: 0px;
+    color: rgb(73, 120, 135) ;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.post-content {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+

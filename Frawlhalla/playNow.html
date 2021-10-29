@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Now</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../Assets//jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <header class="bg-blue">
+        <div class="left-header">
+            <div class="dropdown" onclick="toggleDropdown()">
+                <img src="../Assets/Hamburger_icon.png" id="hamburger-icon" class="dropdown-button">
+                <div class="dropdown-content">
+                    <a href="index.html"
+                        class="text-blue bg-blue font-helvetica text-bold text-decoration-none text-size-small">Home</a>
+                    <a href="screenshots.html"
+                        class="text-blue bg-blue font-helvetica text-bold text-decoration-none text-size-small">Screenshots</a>
+                    <a href="characters.html"
+                        class="text-blue bg-blue font-helvetica text-bold text-decoration-none text-size-small">Characters</a>
+                    <a href="events.html"
+                        class="text-blue bg-blue font-helvetica text-bold text-decoration-none text-size-small">Events</a>
+                </div>
+            </div>
+            <img id="logo" src="../Assets/Logo.png">
+        </div>
+    </header>
+
+    <section class="register-section font-helvetica">
+        <p class="info-title text-blue font-helvetica text-bold margin-lr text-align-center text-size-big">Register</p>
+        <form onsubmit="onRegister();return false;">
+            <label for="name" class="inputLbl"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" id="name" name="name">
+
+            <label for="email" class="inputLbl"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" id="email" name="email">
+
+            <label for="password" class="inputLbl"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="password" name="password">
+
+            <label for="gender" class="inputLbl"><b>Gender</b></label>
+            <select id="gender" name="gender">
+                <option value="">Choose Option</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label>
+                <input type="checkbox" id="agreement" name="agreement" class="inputLbl"> I agree to the Terms and Conditions
+            </label>
+
+            <button type="submit" class="btnSubmit">Register now</button>
+            <b id="register-feedback" class="font-helvetica"></b>
+        </form>
+    </section>
+
+    <footer class="bg-blue font-helvetica text-bold text-blue text-size-small padding-tb">
+        <div class="footer-hl-container margin-lr">
+            <a href="#" class="unused-hl text-decoration-none text-blue">About Us</a>
+            <pre> | </pre>
+            <a href="#" class="unused-hl text-decoration-none text-blue">Contact Us</a>
+            <pre> | </pre>
+            <a href="#" class="unused-hl text-decoration-none text-blue">Privacy Policy</a>
+        </div>
+        <br>
+        <p class="text-align-center margin-lr">© 2021 Billy Kurniawan - 2301937015 | Renaldy Rizalna - 2301850683 |
+            Muhammad Abdul Aziz Al Ghofari - 2301932153. All Rights Reserved.</p>
+    </footer>
+</body>
+
+<script>
+    const feedbackText = $('#register-feedback');
+
+    function onRegister() {
+        let name = $('#name')[0].value;
+        let email = $('#email')[0].value;
+        let password = $('#password')[0].value;
+        let gender = $('#gender')[0].value;
+        let agreement = $('#agreement:checked').val();
+        
+        let emailAt = email.indexOf('@');
+        let emailDot = email.indexOf('.');
+
+        if (name.length < 3) {
+            errorText('Name must be atleast 3 characters');
+        }
+        else if (emailAt <= 0 || emailDot <= emailAt + 2 || emailDot === email.length - 1) {
+            errorText('Please enter a valid email');
+        }
+        else if (password.length < 8) {
+            errorText('Password must be atleast 8 characters');
+        }
+        else if (gender.length === 0) {
+            errorText('You must specify your gender');
+        }
+        else if (agreement == null) {
+            errorText('You must agree to our terms & conditions');
+        }
+        else {
+            errorText('Registration success!', true);
+        }
+    }
+
+    function errorText(text, success=false) {
+        feedbackText.css({
+            'display': 'block',
+            'color': (success ? 'green' : 'red')
+        });
+        feedbackText.text(text);
+    }
+</script>
+</html>
