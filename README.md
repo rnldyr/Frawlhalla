@@ -1,4 +1,4 @@
-# Project HCI
+# Project for Human Computer Interaction course (LAB)
 
 ## Requirements
 ### No. 1
